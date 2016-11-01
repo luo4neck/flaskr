@@ -56,6 +56,12 @@ def add_entry():
 	flash('New entry was successfully posted')
 	return redirect(url_for('show_entries'))
 
+# about..
+@app.route('/about', methods=['GET'])
+def about():
+	error = None
+	return render_template('about.html')
+
 # loggin..
 @app.route('/login', methods=['GET', 'POST'])
 def login():
